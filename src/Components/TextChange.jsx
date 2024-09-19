@@ -1,28 +1,35 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+
 const TextChange = () => {
-  const texts = ["Hi, I'm Aditi", "Hi, I'm Aditi", "Hi, I'm Aditi"];
+  const texts = ["Hi, I'm Viramakali ", "Aka, Vignesh ", "I'm, Tech Enthusiast "];
   const [currenText, setCurrentText] = useState("");
-  const [endValue, setendValue] = useState(true);
+  const [endValue, setEndValue] = useState(0);
   const [isForward, setIsForward] = useState(true);
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
+      // Update the current text
       setCurrentText(texts[index].substring(0, endValue));
+      
+      // Handle forward typing and erasing logic
       if (isForward) {
-        setendValue((prev) => prev + 1);
+        if (endValue < texts[index].length) {
+          setEndValue((prev) => prev + 1);
+        } else {
+          // When the full text is displayed, switch to erasing
+          setIsForward(false);
+        }
       } else {
-        setendValue((prev) => prev - 1);
+        if (endValue > 0) {
+          setEndValue((prev) => prev - 1);
+        } else {
+          // When fully erased, move to the next text
+          setIsForward(true);
+          setIndex((prev) => (prev + 1) % texts.length);
+        }
       }
-      if (endValue > texts[index].length + 10) {
-        setIsForward(false);
-      }
-      if (endValue < 2.1) {
-        setIsForward(true);
-        setIndex((prev) => prev & texts.length);
-      }
-    }, 50);
+    }, 100); // Adjust timing if needed
 
     return () => clearInterval(intervalId);
   }, [endValue, isForward, index, texts]);

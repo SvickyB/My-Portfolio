@@ -1,22 +1,31 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import virtualAssistantImg from "../../assets/virtualAssistantImg.webp"; // Add correct paths
+import ecommerceImg from "../../assets/ecommerceImg.jpg";
+import mailSenderImg from "../../assets/mailSenderImg.png";
 
 const Projects = () => {
   return (
-    <div id="Projects" className="p-10 md:p-24 text-white ">
-      <h1 className="text-2xl md:text-4xl text-white font-bold">Projects</h1>
-      <div className="py-12 px-8 flex flex-wrap gap-5">
+    <div id="Projects" className="p-10 md:p-24 text-white">
+      <h1 className="text-2xl md:text-4xl font-bold">Projects</h1>
+      <div className="py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         <ProjectCard
-          title="Blogging Website"
-          main="this is a bloggin website created in next js and used some component library used some component library"
+          title="Virtual Assistant"
+          main="A virtual assistant (VA) is a software agent that can perform a range of tasks or services for a user based on user input such as sending mail, tracing mobile number, commands or questions, including verbal ones."
+          sourceCodeUrl="https://github.com/SvickyB/Virtual-Assistant"
+          bannerImg={virtualAssistantImg}
         />
         <ProjectCard
-          title="Youtue Clone"
-          main="this is a bloggin website created in next js and used some component library used some component library"
+          title="E-Commerce Django"
+          main="Developed a dynamic e-commerce website using Django with MySQL as the database backend."
+          sourceCodeUrl="https://github.com/SvickyB/django-ecommerce-master"
+          bannerImg={ecommerceImg}
         />
         <ProjectCard
-          title="Netflix Clone"
-          main="this is a blogging website created this ijsdjf l in next js and used some component library used some component library"
+          title="Resilient Mail Sender"
+          main="Developed a resilient mail sender application in JavaScript, featuring automatic retries."
+          sourceCodeUrl="https://github.com/SvickyB/Resilent_Mail_Sender"
+          bannerImg={mailSenderImg}
         />
       </div>
     </div>

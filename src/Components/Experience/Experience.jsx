@@ -1,10 +1,8 @@
 import React from "react";
 import { FaCss3, FaFigma, FaHtml5, FaJs, FaReact } from "react-icons/fa";
-import { SiRedis } from "react-icons/si";
-import { FaGoogle } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
-import { RiNetflixFill } from "react-icons/ri";
-import { FaAmazon } from "react-icons/fa";
+import drobo from "../../assets/drobo.jpg";
+import pearl from "../../assets/pearl.jpg";
 const Experience = () => {
   return (
     <div id="Experience" className="p-10 md:p-24">
@@ -29,47 +27,28 @@ const Experience = () => {
           <span className="p-3 bg-zinc-950 flex items-center rounded-2xl">
             <SiMongodb color="#47A248" size={50} />
           </span>
-          <span className="p-3 bg-zinc-950 flex items-center rounded-2xl">
-            <SiRedis color="#FF4438" size={50} />
-          </span>
+        
         </div>
         <div>
           <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center">
-            <FaGoogle color="#4285F4" size={50} />
+            <img src={drobo} alt="Drobo logo" className="w-12 h-12" />
             <span className="text-white">
-              <h2 className="leading-tight">Software Engineer , Google</h2>
-              <p className="text-sm leading-tight font-thin">
-                Sept 2023 - Present
-              </p>
+              <h2 className="leading-tight">Intern, Software Engineer, DrobospaceX Automation Pvt. Ltd.</h2>
+              <p className="text-sm leading-tight font-thin">Feb 2024 - Mar 2024</p>
               <ul className="text-sm p-2">
-                <li>- Work as software developer</li>
-                <li>- Senior SDE-developer</li>
+                <li>- Worked as a Software Developer Intern</li>
+                <li>- Python Developer</li>
               </ul>
             </span>
           </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg  p-4 items-center">
-            <RiNetflixFill color="#E50914" size={50} />
+          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg p-4 items-center">
+          <img src={pearl} alt="Drobo logo" className="w-12 h-12" />
             <span className="text-white">
-              <h2 className="leading-tight">Software Engineer, Google</h2>
-              <p className="text-sm leading-tight font-thin">
-                Sept 2023 - Present
-              </p>
+              <h2 className="leading-tight">Intern, Software Developer, Pearl Thoughts</h2>
+              <p className="text-sm leading-tight font-thin">Sept 2024 - Present</p>
               <ul className="text-sm p-2">
-                <li>- Work as software developer.</li>
-                <li>- Senior SDE-developer</li>
-              </ul>
-            </span>
-          </div>
-          <div className="flex gap-10 bg-slate-950 bg-opacity-45 mt-4 rounded-lg  p-4 items-center">
-            <FaAmazon color="#FF9900" size={50} />
-            <span className="text-white">
-              <h2 className="leading-tight">Software Engineer, Google</h2>
-              <p className="text-sm leading-tight font-thin">
-                Sept 2023 - Present
-              </p>
-              <ul className="text-sm p-2">
-                <li>- Work as software developer.</li>
-                <li>- Senior SDE-developer</li>
+                <li>- Work Intern as a Software Developer</li>
+                <li>- Jr. Software Developer (NestJS, PostgreSQL)</li>
               </ul>
             </span>
           </div>

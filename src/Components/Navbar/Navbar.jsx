@@ -27,7 +27,7 @@ const Navbar = () => {
             Projects
           </li>
         </a>
-        <a href="#Footer">
+        <a href="#Contact">
           <li className="text-md transition-all duration-300 p-1 md:p-0">
             Contact
           </li>
