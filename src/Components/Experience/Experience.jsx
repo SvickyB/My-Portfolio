@@ -45,9 +45,9 @@ const Experience = () => {
           <img src={pearl} alt="Drobo logo" className="w-12 h-12" />
             <span className="text-white">
               <h2 className="leading-tight">Intern, Software Developer, Pearl Thoughts</h2>
-              <p className="text-sm leading-tight font-thin">Sept 2024 - Present</p>
+              <p className="text-sm leading-tight font-thin">Sept 2024 - Oct 2024</p>
               <ul className="text-sm p-2">
-                <li>- Work Intern as a Software Developer</li>
+                <li>- Worked as a Software Developer Intern</li>
                 <li>- Jr. Software Developer (NestJS, PostgreSQL)</li>
               </ul>
             </span>
