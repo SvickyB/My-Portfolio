@@ -11,24 +11,22 @@ const Home = () => {
   ]);
 
   return (
-    <section className="min-h-screen pt-20 flex flex-col md:flex-row items-center justify-between px-6 md:px-20">
+    <section className="min-h-screen pt-20 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 bg-gray-900">
       <div className="md:w-1/2 space-y-6">
         <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
           {typedText}
         </h1>
         <p className="text-gray-300 text-lg leading-relaxed">
-          Hello! I'm a Software Developer from Karaikudi, Tamil Nadu.
-          With expertise in ReactJS, Python, MySQL, PostgreSQL, and NestJS,
-          I aim to become a top developer and entrepreneur.
+          Hello! I'm a Software Developer from Karaikudi, Tamil Nadu. With expertise in ReactJS, Python, MySQL, PostgreSQL, and NestJS, I aim to become a top developer and entrepreneur.
         </p>
-        <Button onClick={() => document.getElementById('about').scrollIntoView()}>
+        <Button onClick={() => document.getElementById('about').scrollIntoView()} aria-label="Explore My Work">
           Explore My Work
         </Button>
       </div>
-      <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+      <div className="mt-16 md:mt-0 md:w-1/2 flex justify-center">
         <img
           src={profileImage}
-          alt="Profile"
+          alt="Profile of Viramakali, a software developer"
           className="w-80 h-80 rounded-full object-cover shadow-xl"
         />
       </div>
