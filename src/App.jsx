@@ -1,21 +1,19 @@
-import About from "./Components/About/About";
-import Experience from "./Components/Experience/Experience";
-import Contact from "./Components/contact/Contact";
-import Home from "./Components/Home/Home";
-import Navbar from "./Components/Navbar/Navbar";
-import Projects from "./Components/Projects/Projects";
+import Home from './Components/Home/Home'
+import About from './Components/About/About'
+import Experience from './Components/Experience/Experience'
+import Projects from './Components/Projects/Projects'
+import Contact from './Components/contact/Contact'
+import Layout from './Components/layout/Layout'
 
-function App() {
+const App = () => {
   return (
-    <div className="bg-[#171d32] h-auto w-full overflow-hidden">
-      <Navbar />
+    <Layout>
       <Home />
       <About />
       <Experience />
       <Projects />
       <Contact />
-    </div>
+    </Layout>
   );
-}
-
+};
 export default App;

@@ -1,30 +1,38 @@
-import React from "react";
-import avatarImg from "../../assets/portfolio1st.jpeg";
-import TextChange from "../TextChange";
+// src/components/home/Home.jsx
+import { useTypewriter } from '../../hooks/useTypewriter';
+import { Button } from '../common/Button';
+import profileImage from '../../assets/images/portfolio1st.jpeg'; // Import the image
 
 const Home = () => {
+  const typedText = useTypewriter([
+    "Hi, I'm Viramakali",
+    "aka, Vignesh",
+    "I'm a Tech Enthusiast"
+  ]);
+
   return (
-    <div className="text-white flex w-full justify-between items-start p-10 md:p-20">
-      <div className="md:w-2/4 md:pt-10 ">
-        <h1 className="text-xl md:text-6xl font-bold flex leading-normal tracking-tighter">
-          <TextChange />
-        </h1><br></br>
-        <p className="text-sm md:text-1.5xl tracking-tight ">
-        Hello! I'm Viramakali, aka Vignesh, a Software Developer from Karaikudi, Tamil Nadu. 
-        With expertise in ReactJS, Python, MySQL, PostgreSQL, and NestJS, I aim to become a top developer 
-        and entrepreneur. I believe in hard and smart work, striving to create impactful projects. 
-        In my free time, I enjoy writing poems and listening to music for inspiration. Let’s connect!
-
-
+    <section className="min-h-screen pt-20 flex flex-col md:flex-row items-center justify-between px-6 md:px-20">
+      <div className="md:w-1/2 space-y-6">
+        <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+          {typedText}
+        </h1>
+        <p className="text-gray-300 text-lg leading-relaxed">
+          Hello! I'm a Software Developer from Karaikudi, Tamil Nadu.
+          With expertise in ReactJS, Python, MySQL, PostgreSQL, and NestJS,
+          I aim to become a top developer and entrepreneur.
         </p>
-        <button className="mt-5 md:md-10 text-white py02 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]">
-          Scroll Down
-        </button>
+        <Button onClick={() => document.getElementById('about').scrollIntoView()}>
+          Explore My Work
+        </Button>
       </div>
-      <div>
-        <img className="" src={avatarImg} alt=""  style={{ height: '500px', width: '500px' }} />
+      <div className="mt-8 md:mt-0 md:w-1/2 flex justify-center">
+        <img
+          src={profileImage}
+          alt="Profile"
+          className="w-80 h-80 rounded-full object-cover shadow-xl"
+        />
       </div>
-    </div>
+    </section>
   );
 };
 

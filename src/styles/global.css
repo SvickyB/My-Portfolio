@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #465697;
+  --background-color: #171d32;
+  --text-color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#171d32] text-white;
+  font-family: 'Inter', sans-serif;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-20;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#465697] to-[#61DAFB];
+}

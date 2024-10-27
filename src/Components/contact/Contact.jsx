@@ -1,43 +1,57 @@
-import React from "react";
+// src/components/contact/Contact.jsx
 import { MdOutlineEmail } from "react-icons/md";
 import { CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
+import { SectionTitle } from '../common/SectionTitle';
+
+const ContactLink = ({ Icon, href, children }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors duration-300"
+  >
+    <Icon size={20} />
+    <span>{children}</span>
+  </a>
+);
 
 const Contact = () => {
-  return (
-    <div
-      id="Contact"
-      className="flex justify-around bg-[#465697] text-white p-10 md:p-12 items-center"
-    >
-      <div>
-        <h1 className="text-2xl md:text-6xl font-bold">Contact</h1>
-        <h3 className="text-sm md:text-2xl font-normal">
-          Feel Free To reach out!
-        </h3>
-      </div>
+  const contactLinks = [
+    {
+      Icon: MdOutlineEmail,
+      href: "mailto:vigneshpillai123123@gmail.com",
+      text: "vigneshpillai123123@gmail.com"
+    },
+    {
+      Icon: CiLinkedin,
+      href: "https://www.linkedin.com/in/viramakali",
+      text: "linkedin.com/viramakali"
+    },
+    {
+      Icon: FaGithub,
+      href: "https://github.com/SvickyB",
+      text: "github.com/SvickyB"
+    }
+  ];
 
-      <ul className="text-sm md:text-xl">
-        <li className="flex gap-1 items-center">
-          <MdOutlineEmail size={20} />
-          <a href="mailto:vigneshpillai123123@gmail.com" className="hover:underline">
-            vigneshpillai123123@gmail.com
-          </a>
-        </li>
-        <li className="flex gap-1 items-center">
-          <CiLinkedin />
-          <a href="https://www.linkedin.com/in/viramakali" target="_blank" rel="noopener noreferrer" className="hover:underline">
-            linkedln.com/viramakali
-          </a>
-        </li>
-        <li className="flex gap-1 items-center">
-          <FaGithub />
-          <a href="https://github.com/SvickyB" target="_blank" rel="noopener noreferrer" className="hover:underline">
-            github.com/SvickyB
-          </a>
-        </li>
-      </ul>
-    </div>
+  return (
+    <section id="contact" className="section-padding bg-[#465697]">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div className="text-center md:text-left">
+          <SectionTitle className="mb-4">Contact</SectionTitle>
+          <p className="text-xl text-gray-200">Feel free to reach out!</p>
+        </div>
+        
+        <div className="space-y-4">
+          {contactLinks.map((link, index) => (
+            <ContactLink key={index} {...link}>
+              {link.text}
+            </ContactLink>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
-
 export default Contact;
