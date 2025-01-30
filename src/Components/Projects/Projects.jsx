@@ -7,6 +7,7 @@ import virtualAssistantImg from '../../assets/images/virtualAssistantImg.webp';
 import mailSenderImg from '../../assets/images/mailSenderImg.png';
 import ruleEngineWithAST from '../../assets/images/ruleEngineWithAST.jpeg';
 import realTimeWeatherApplication from '../../assets/images/realTimeWeatherApplication.jpeg';
+import smartRestroomMonitoringSystem from '../../assets/images/smartRestroom.jpeg';
 
 const Projects = () => {
   const projects = [
@@ -44,6 +45,13 @@ const Projects = () => {
       image: realTimeWeatherApplication, 
       technologies: [  "Javascript", "Nodemailer", "React", "Tailwind CSS"],
       githubLink: "https://github.com/SvickyB/Real-Time_Weather_Application"
+    },
+    {
+      title: "Smart Restroom Monitoring System",
+      description: "Smart Restroom Monitoring System using postgresql,react with tailwind css, nodejs, expressjs, mqtt and web socket for real time updates with data stimulation.",
+      image: smartRestroomMonitoringSystem, 
+      technologies: [  "Javascript", "Websocket", "React", "MQTT", "Tailwind CSS"],
+      githubLink: "https://github.com/SvickyB/Smart-Restroom"
     },
   ];
 

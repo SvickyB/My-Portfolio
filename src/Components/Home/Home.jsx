@@ -10,6 +10,10 @@ const Home = () => {
     "I'm a Tech Enthusiast"
   ]);
 
+  const handleDownloadResume = () => {
+    window.open('https://drive.google.com/file/d/116WUIUom2LjaFcaPErxKltAxKXwYDoU-/view?usp=drivesdk', '_blank');
+  };
+
   return (
     <section className="min-h-screen pt-20 flex flex-col md:flex-row items-center justify-between px-6 md:px-20 bg-gray-900">
       <div className="md:w-1/2 space-y-6">
@@ -17,10 +21,12 @@ const Home = () => {
           {typedText}
         </h1>
         <p className="text-gray-300 text-lg leading-relaxed">
-          Hello! I'm a Software Developer from Karaikudi, Tamil Nadu. With expertise in ReactJS, Python, MySQL, PostgreSQL, and NestJS, I aim to become a top developer and entrepreneur.
+          Hello! I'm a Software Developer from Karaikudi, Tamil Nadu. With expertise in ReactJS, Python, MySQL, PostgreSQL, I aim to become a top developer and entrepreneur.
         </p>
-        <Button onClick={() => document.getElementById('about').scrollIntoView()} aria-label="Explore My Work">
-          Explore My Work
+        <Button 
+          onClick={handleDownloadResume} 
+          aria-label="Resume">
+          Resume
         </Button>
       </div>
       <div className="mt-16 md:mt-0 md:w-1/2 flex justify-center">

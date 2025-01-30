@@ -2,20 +2,45 @@
 import React from 'react';
 import ExperienceCard from './ExperienceCard';
 import { SectionTitle } from '../common/SectionTitle';
-import { FaHtml5, FaCss3, FaReact, FaJs, FaFigma } from 'react-icons/fa';
-import { SiMongodb } from 'react-icons/si';
+import { FaJs, FaPython, FaDatabase } from "react-icons/fa";
+import { SiDjango, SiMysql, SiPostgresql, SiFigma } from "react-icons/si";
 import droboLogo from '../../assets/images/drobo.jpg'; // Import the image
 import pearlLogo from '../../assets/images/pearl.jpg'; // Import the image
 
 const Experience = () => {
   const skills = [
-    { Icon: FaHtml5, color: "#E34F26" },
-    { Icon: FaCss3, color: "#1572B6" },
-    { Icon: FaReact, color: "#61DAFB" },
-    { Icon: FaJs, color: "#F7DF1E" },
-    { Icon: FaFigma, color: "#F24E1E" },
-    { Icon: SiMongodb, color: "#47A248" },
+    { 
+      Icon: FaPython, 
+      color: "#3776AB",
+      name: "Python"
+    },
+    { 
+      Icon: SiDjango, 
+      color: "#092E20",
+      name: "Django"
+    },
+    { 
+      Icon: SiMysql, 
+      color: "#4479A1",
+      name: "MySQL"
+    },
+    { 
+      Icon: SiPostgresql, 
+      color: "#336791",
+      name: "PostgreSQL"
+    },
+    { 
+      Icon: FaJs, 
+      color: "#F7DF1E",
+      name: "JavaScript"
+    },
+    { 
+      Icon: FaDatabase, 
+      color: "#FF4B4B",
+      name: "UI Design"
+    },
   ];
+  
 
   const experiences = [
     {
