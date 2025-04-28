@@ -11,7 +11,7 @@ const Home = () => {
   ]);
 
   const handleDownloadResume = () => {
-    window.open('https://drive.google.com/file/d/116WUIUom2LjaFcaPErxKltAxKXwYDoU-/view?usp=drivesdk', '_blank');
+    window.open('https://drive.google.com/file/d/1Xx5v9fICPbCz_U5SC3YBDefZUgDLM-A8/view?usp=drivesdk', '_blank');
   };
 
   return (
