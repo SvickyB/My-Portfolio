@@ -21,7 +21,7 @@ const Home = () => {
           {typedText}
         </h1>
         <p className="text-gray-300 text-lg leading-relaxed">
-          Hello! I'm a Software Developer from Karaikudi, Tamil Nadu. With expertise in ReactJS, Python, MySQL, PostgreSQL, I aim to become a top developer and entrepreneur.
+          Hello! I'm a Software Developer from Bengaluru. With expertise in Python, Django, MySQL, PostgreSQL.
         </p>
         <Button 
           onClick={handleDownloadResume} 
