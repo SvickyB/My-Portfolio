@@ -5,7 +5,7 @@ import { SectionTitle } from '../common/SectionTitle';
 import { FaJs, FaPython, FaDatabase } from "react-icons/fa";
 import { SiDjango, SiMysql, SiPostgresql, SiFigma } from "react-icons/si";
 import droboLogo from '../../assets/images/drobo.jpg'; // Import the image
-import pearlLogo from '../../assets/images/pearl.jpg'; // Import the image
+import livensense from '../../assets/images/livnsense_logo.jpg'; // Import the image
 
 const Experience = () => {
   const skills = [
@@ -44,6 +44,19 @@ const Experience = () => {
 
   const experiences = [
     {
+      logo: livensense, // Use the imported image
+      company: "LivNSense GreenOps",
+      position: "Software Engineer Intern",
+      duration: "Feb 2025 - Present",
+      responsibilities: [
+        "Working as a Software Engineer Intern",
+        "Developing and maintaining backend web applications using Python (Django) and PostgreSQL.",
+        "Designing and managing RESTful API endpoints to enhance application features and functionality.",
+        "Optimized API performance, reducing execution time by up to 50%.",
+      ]
+    },
+    
+    {
       logo: droboLogo, // Use the imported image
       company: "DrobospaceX Automation Pvt. Ltd.",
       position: "Software Engineer Intern",
@@ -52,17 +65,8 @@ const Experience = () => {
         "Worked as a Software Developer Intern",
         "Python Developer"
       ]
-    },
-    {
-      logo: pearlLogo, // Use the imported image
-      company: "Pearl Thoughts",
-      position: "Software Developer Intern",
-      duration: "Sept 2024 - Oct 2024",
-      responsibilities: [
-        "Worked as a Software Developer Intern",
-        "Jr. Software Developer (NestJS, PostgreSQL)"
-      ]
     }
+    
   ];
 
   return (
