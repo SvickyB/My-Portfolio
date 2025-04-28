@@ -21,7 +21,7 @@ const Home = () => {
           {typedText}
         </h1>
         <p className="text-gray-300 text-lg leading-relaxed">
-          Hello! I'm a Software Developer from Bengaluru. With expertise in Python, Django, RESTful API's, MySQL, PostgreSQL.
+          Hello! I'm a Software Developer from Bengaluru. With expertise in Python, Django, RESTfull API's, MySQL, PostgreSQL.
         </p>
         <Button 
           onClick={handleDownloadResume} 
